@@ -1,4 +1,4 @@
-# Bayesian Inference of Poisson Process: Homogeneous and Inhomogeneous
+# Bayesian Inference of Poisson Process: Homogeneous and Inhomogeneous Using Stan
 
 ## Requirements (Python packages)
 
