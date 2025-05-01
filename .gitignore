@@ -172,3 +172,10 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+# macos
+.DS_Store
+
+# stan models
+test_stan/test_nhpp
+test_stan/test_poisson
