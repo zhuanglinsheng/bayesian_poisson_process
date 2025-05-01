@@ -7,9 +7,11 @@
 - scipy
 - matplotlib
 
+For an improved display, consider installing `ipywidgets`.
+
 ## Implementations
 
-### Model 1: [homogeneous Poisson Process](./test_stan/test_nhpp.ipynb)
+### Model 1: [homogeneous Poisson Process](./test_stan/test_hpp.ipynb)
 
 - Data: Poisson events $(t_1, t_2, ..., t_N)\subset[0, T)$.
 - Parameter: Poisson arrival rate $\lambda > 0$.
