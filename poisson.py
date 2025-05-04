@@ -21,7 +21,7 @@ def simulate_hpp(
 	events: list[datetime] = []
 	current_t = start_time
 	while True:
-		hour_duration = rng.expovariate(lambd=1 / hour_arrivals)
+		hour_duration = rng.expovariate(lambd=hour_arrivals)  # lambd = 1 / E(x)
 		current_t += timedelta(hours=hour_duration)
 		if current_t < end_time:
 			events.append(current_t)
@@ -36,7 +36,7 @@ def simulate_nhpp(
 		hour_arrivals_ub: float,
 		rng_poisson: random.Random,
 		rng_uniform: random.Random,
-) -> list[datetime]:
+):
 	"""Simulate non-homogeneous Poisson process
 
 	Note:
@@ -57,4 +57,4 @@ def simulate_nhpp(
 		t_intensity = hour_arrivals(t_loc)
 		if u < t_intensity / hour_arrivals_ub:
 			events.append(t)
-	return events
+	return events, unthinned_events, uniforms
